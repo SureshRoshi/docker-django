@@ -1,7 +1,5 @@
 # Full-Stack Application: React, Django, MySQL with Docker Compose
 
-![Project Image/Logo]
-
 ## Overview
 
 This repository contains a full-stack web application built with React for the frontend, Django for the backend, and MySQL as the database, all orchestrated using Docker Compose.
@@ -14,7 +12,7 @@ This repository contains a full-stack web application built with React for the f
 
 ## Prerequisites
 
-- [Docker](https://docs.docker.com/get-docker/)
+- [Docker](https://docs.docker.com/get-docker/)  
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Getting Started
@@ -22,9 +20,20 @@ This repository contains a full-stack web application built with React for the f
 ### Clone the Repository
 
 ### Running the Application
-```bash
-docker-compose up -d
-```
+1. Navigate to the `backend` folder and build the image:
+   ```bash
+   docker build -t django-image:latest .
+   ```
+
+2. Move to the `frontend` folder and build the image:
+   ```bash
+   docker build -t react_img:latest .
+   ```
+
+3. Return to the root folder and run the command:
+   ```bash
+   docker-compose up -d
+   ```
 ### Additional Information
 #### Points to Note:
 - Customize Dockerfiles and configurations for individual services as required.
